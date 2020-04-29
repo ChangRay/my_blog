@@ -1,0 +1,41 @@
+html,
+body {
+  font-size: 20px;
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft JhengHei", Sans-serif;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.index_avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px 0 #c5ad84;
+}
+
+.article_container {
+  min-height: 85vh;
+}
+
+.public_header_nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.public_header_nav .navbar-brand {
+  width: 70px;
+}
+
+@media (max-width: 720px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  .public_header_nav .navbar-brand {
+    max-width: 42px;
+  }
+}

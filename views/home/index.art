@@ -1,0 +1,64 @@
+{{extend './common/layout.art'}}
+
+
+{{block 'main'}}
+
+    {{include './common/header.art'}}
+
+    <!-- 大區塊 -->
+    <div class="jumbotron px-4">
+      <div class="text-center">
+        <img src="https://www.vettedpetcare.com/vetted-blog/wp-content/uploads/2018/08/How-To-Travel-With-a-Super-Anxious-Cat-square.jpeg" class="index_avatar" />
+      </div>
+      <h1 class="display-4 text-center my-lg-4">ChangRay Blog</h1>
+      <p class="lead text-center">
+        一個全端Blog作品Demo
+      </p>
+      <p class="text-center">奇文共欣賞，疑義相與析。</p>
+      <hr class="my-4" />
+    </div>
+
+    <div class="container my-5 z-depth-1">
+      <!--Section: Content-->
+      <section class="dark-grey-text">
+        <div class="row pr-lg-5 align-items-center">
+          <div class="col-lg-6 mb-4">
+            <div class="view">
+              <img src="https://s30776.pcdn.co/wp-content/uploads/2020/04/AdobeStock_305233591.jpeg" class="img-fluid" alt="smaple image" />
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start">
+            <div>
+              <h3 class="font-weight-bold mb-4">選用技術棧</h3>
+
+              <div class="card">
+                <div class="card-header">
+                  Server端
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">使用Express作為Server端編寫路由與middleware</li>
+                </ul>
+                <div class="card-header">
+                  Database
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">使用mongodb(mongoose)存放數據</li>
+                </ul>
+                <div class="card-header">
+                  Client端
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">UI庫使用 Bootstrap4</li>
+                  <li class="list-group-item">以 art-template 渲染</li>
+                </ul>
+             </div>
+
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+
+    {{include './common/footer.art'}}
+
+{{/block}}

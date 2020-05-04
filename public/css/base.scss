@@ -30,6 +30,44 @@ img {
   }
 }
 
+// backstage
+.backstage_nav {
+  min-height: 8vh;
+}
+
+.backstage_aside {
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      text-shadow: 0 0 35px #fff;
+    }
+
+    &.active {
+      color: #fff;
+      text-shadow: 0 0 35px #fff;
+    }
+  }
+}
+
+.backstage_main_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  min-height: 92vh;
+
+  .backstage_aside {
+    width: 20%;
+    background-color: darken($color: #17a2b8, $amount: 20%);
+  }
+
+  .backstage_section {
+    width: 80%;
+  }
+}
+
 @media (max-width: 720px) {
   html,
   body {

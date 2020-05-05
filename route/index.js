@@ -1,14 +1,10 @@
 const express = require("express");
 // 創建路由實例
-const index = express.Router();
-
-// ---------------middle---------------------
-index.use(require("./index/logPathToNav"));
-// ---------------middle---------------------
+const indexRouter = express.Router();
 
 // 規則
-index.get("/", require("./index/indexPage"));
+indexRouter.get("/", require("./index/indexPage"));
+indexRouter.get("/articles", require("./index/articlesPage"));
+indexRouter.get("/article", require("./index/articleInnerPage"));
 
-index.get("/article", require("./index/articlePage"));
-
-module.exports = index;
+module.exports = indexRouter;

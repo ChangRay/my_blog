@@ -30,8 +30,22 @@ img {
   width: 70px;
 }
 
+.img-thumb {
+  max-height: 200px;
+}
+
 .backstage_nav {
   min-height: 8vh;
+}
+
+.backstage_nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.backstage_nav a:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
 .backstage_aside a {
@@ -46,6 +60,7 @@ img {
 .backstage_aside a.active {
   color: #fff;
   text-shadow: 0 0 35px #fff;
+  background-color: #206f7b;
 }
 
 .backstage_main_wrap {

@@ -1,0 +1,93 @@
+{{extend './common/layout.art'}}
+
+{{block 'main'}}
+    {{include './common/header.art'}}
+
+    <!-- article -->
+    <div class="article_container container mt-5">
+      <!--Section: Content-->
+      <section class="dark-grey-text">
+        <!-- Section heading -->
+        <h2 class="text-center font-weight-bold mb-4 pb-2">前端、雜談</h2>
+        <!-- Section description -->
+        <p class="text-center mx-auto w-responsive mb-lg-5">
+          文采承殊渥，流傳必絕倫。
+        </p>
+
+         <div class="row text-center my-lg-5 my-2">
+            <div class="col-sm">
+              <a href="#!" class="text-primary">
+                <i class="fas fa-hashtag pr-2"></i>
+                一般
+              </a>
+            </div>
+            <div class="col-sm">
+               <a href="#!" class="text-success">
+                <i class="fas fa-hashtag pr-2"></i>
+                前端
+              </a>
+            </div>
+            <div class="col-sm">
+               <a href="#!" class="text-info">
+                <i class="fas fa-hashtag pr-2"></i>
+                新聞
+              </a>
+            </div>
+        </div>
+
+        {{each articlesArr}}
+        <div class="item">
+          <!-- Grid row -->
+          <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-5">
+              <!-- Featured image -->
+              <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+                <img class="img-fluid" src={{$value.cover ? $value.cover : "https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"}} alt="Sample image" />
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-7">
+              <!-- Category -->
+              <a href="#!" class="green-text">
+                <h6 class="font-weight-bold mb-3">
+                  <i class="fas fa-tags pr-2"></i>
+                  {{$value.tag}}
+                </h6>
+              </a>
+              <!-- Post title -->
+              <h4 class="font-weight-bold mb-3"><strong>{{$value.title}}</strong></h4>
+              <!-- Excerpt -->
+              <p>
+                {{$value.desc}}
+              </p>
+              <!-- Post data -->
+              <p>
+                by
+                <a><strong>{{$value.author}}</strong></a>
+                , {{dateFormat($value.date, 'yyyy/mm/dd')}}
+              </p>
+              <!-- Read more button -->
+              <div class="text-center text-lg-right">
+                <a href="/article" class="btn btn-success btn-md btn-rounded mx-0 text-white">Read more</a>
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+
+          <hr class="my-5" />
+        </div>
+        {{/each}}
+
+      </section>
+      <!--Section: Content-->
+    </div>
+
+    {{include './common/footer.art'}}
+{{/block}}

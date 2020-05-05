@@ -8,85 +8,42 @@
       <!--Section: Content-->
       <section class="dark-grey-text">
         <!-- Section heading -->
-        <h2 class="text-center font-weight-bold mb-4 pb-2">前端、雜談</h2>
-        <!-- Section description -->
-        <p class="text-center mx-auto w-responsive mb-lg-5">
-          文采承殊渥，流傳必絕倫。
-        </p>
+        <h2 class="text-center font-weight-bold mb-4 pb-2">個人Blog上線</h2>
 
-         <div class="row text-center my-lg-5 my-2">
-            <div class="col-sm">
-              <a href="#!" class="text-primary">
-                <i class="fas fa-hashtag pr-2"></i>
-                一般
-              </a>
-            </div>
-            <div class="col-sm">
-               <a href="#!" class="text-success">
-                <i class="fas fa-hashtag pr-2"></i>
-                前端
-              </a>
-            </div>
-            <div class="col-sm">
-               <a href="#!" class="text-info">
-                <i class="fas fa-hashtag pr-2"></i>
-                新聞
-              </a>
-            </div>
-        </div>
 
-        {{each articlesArr}}
-        <div class="item">
-          <!-- Grid row -->
-          <div class="row align-items-center">
-            <!-- Grid column -->
-            <div class="col-lg-5">
-              <!-- Featured image -->
-              <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-                <img class="img-fluid" src={{$value.cover ? $value.cover : "https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg"}} alt="Sample image" />
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
+          <div class="container">
+              <section class="text-justify">
+                
+              <!-- 導文 -->
+
+               <p class="font-weight-bold">夏至：二十四節氣中的第 10 個節氣，在每年公曆 6 月 20 日，或 21 日，或 22 日。這一天太陽直射北回歸線，是北半球全年中白天最長、夜晚最短的一天。</p>
+          
+                    <p>夏天，是一個炎熱而又歡樂的季節。
+
+                      早上，晴空萬裏，雲霧滿天。太陽公公把一切都鍍上了層黃金。一群美麗的小鳥，在綠樹枝頭歡蹦亂跳，“嘰嘰喳喳”地唱歌。空氣清鮮涼爽，而且散發著一種難以形                      容的芳香，每吸一口都令人振奮。
+
+                      下午，天空一片青灰色，暴烈的太陽把地面烤得滾燙滾燙;一陣南風吹來，卷起一股熱浪。蟬在樹上“知——了”“知——了”地叫著，聲音低沉而緩慢，像在述說著一個古                     老的傳說。老人們坐在樹陰下，耐心地搖著扇子，嘴邊還一直詛咒著炎熱，一邊高興地議論天氣怎樣有利于稻谷抽穗。那些林中的小鳥，都賴洋洋地歇在樹上，似乎                    正在做“豐收”的夢。
+
+                      傍晚，晚霞燒紅了天空。海邊沙灘上人來人往。人們有的在遊泳，有的在撿貝殼，有的在嬉戲，歡聲笑語像海浪一樣陣高過一陣。清涼的海水洗去了人們一身的被                      勞，一身的炎熱，使人感到輕松的爽快。
+
+                      夜晚，人們都不約而同地到公園散步。漫步在公園，一陣陣涼風迎面拂來，好清爽啊!人們在公園裏談天說地，講古論今;一會兒娓娓而談，一會兒激烈爭論，一會兒                      又打鬧哭笑。這種多聲部的大合唱，在河邊飄蕩，傳得很遠，很遠……
+
+                      夏天，是炎熱的，但也是歡樂的，充滿活力的……</p>
+          
+          
+                    <figure class="figure">
+                      <img src="https://cdn.zekkei-japan.jp/images/articles/65f46a78e22a6084905c4434b39161d9.jpg" alt="">
+                      <figcaption class="figure-caption">夏天夏天來臨</figcaption>
+                    </figure>
+
+              </section>
+
+              <div class="text-center my-2">
+                <button type="button" class="btn btn-info" onclick="window.history.back()">上一頁</button>
               </div>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-lg-7">
-              <!-- Category -->
-              <a href="#!" class="green-text">
-                <h6 class="font-weight-bold mb-3">
-                  <i class="fas fa-tags pr-2"></i>
-                  {{$value.tag}}
-                </h6>
-              </a>
-              <!-- Post title -->
-              <h4 class="font-weight-bold mb-3"><strong>{{$value.title}}</strong></h4>
-              <!-- Excerpt -->
-              <p>
-                {{$value.desc}}
-              </p>
-              <!-- Post data -->
-              <p>
-                by
-                <a><strong>{{$value.author}}</strong></a>
-                , {{dateFormat($value.date, 'yyyy/mm/dd')}}
-              </p>
-              <!-- Read more button -->
-              <div class="text-center text-lg-right">
-                <a class="btn btn-success btn-md btn-rounded mx-0 text-white">Read more</a>
-              </div>
-            </div>
-            <!-- Grid column -->
           </div>
-          <!-- Grid row -->
-
-          <hr class="my-5" />
-        </div>
-        {{/each}}
 
       </section>
-      <!--Section: Content-->
     </div>
 
     {{include './common/footer.art'}}

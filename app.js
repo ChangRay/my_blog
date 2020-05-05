@@ -47,6 +47,7 @@ if (NODE_ENV === "development") {
 
 // ---------------route---------------------
 app.use("/", require("./route/index"));
+app.use('/admin', require('./route/admin'))
 // ---------------route---------------------
 
 // 處理404的中間件(放在最底下)

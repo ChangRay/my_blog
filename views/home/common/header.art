@@ -23,7 +23,7 @@
             </a>
           </li>
           <li class="nav-item text-center text-lg-left mx-lg-2 {{path === "/article" ? "active" : ""}}">
-            <a class="nav-link" href="/article">文章</a>
+            <a class="nav-link" href="/articles">文章</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0 text-center text-sm-left">

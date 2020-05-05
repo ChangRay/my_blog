@@ -1,0 +1,82 @@
+{{extend './common/layout.art'}}
+
+{{block 'main'}}
+
+    {{include './common/header.art'}}
+
+    <div class="backstage_main_wrap">
+      <!-- aside -->
+      {{include './common/aside.art'}}
+
+      <!-- main -->
+      <section class="text-center p-5 backstage_section">
+        <div class="card">
+          <div class="card-body text-left">
+            <!-- form -->
+            <form>
+              <div class="form-group">
+                <label for="article_title">文章標題</label>
+                <input type="text" class="form-control" id="article_title" name="article_title" placeholder="文章標題" />
+              </div>
+              <div class="form-group">
+                <label for="article_tag">分類</label>
+                <select class="form-control" id="article_tag" name="article_tag">
+                  <option>一般</option>
+                  <option>前端</option>
+                  <option>新聞</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="article_date">發布時間</label>
+                <input type="date" class="form-control" id="article_date" name="article_date" placeholder="發布時間" />
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="cover_img" />
+                <label class="custom-file-label" for="cover_img" data-browse="上傳">文章封面</label>
+                <div class="thumb-wrapper d-flex my-1 justify-content-center">
+                  <img class="img-thumb" src="" id="preview" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="editor">内容</label>
+                <textarea name="article_content" class="form-control" id="editor"></textarea>
+              </div>
+              <div class="my-2 text-center">
+                <button type="submit" class="btn btn-primary btn-sm">發表文章</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+{{/block}}
+
+{{block 'script'}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/classic/ckeditor.js"></script>
+    <script>
+      let editor
+
+      ClassicEditor.create(document.querySelector('#editor'))
+        .then((newEditor) => {
+          editor = newEditor
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+
+      var file = document.querySelector('#cover_img')
+      var preview = document.querySelector('#preview')
+      // 上傳文件後觸發
+      file.onchange = function () {
+        // 創建fileReader對象
+        var reader = new FileReader()
+        // 讀取file對象，完成時觸發onload(readyState轉為DONE)
+        reader.readAsDataURL(this.files[0])
+        // 觸發onload
+        reader.onload = function () {
+          preview.src = reader.result
+        }
+      }
+    </script>
+{{/block}}

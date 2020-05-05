@@ -1,0 +1,8 @@
+      <!-- aside -->
+      <aside class="backstage_aside py-5 px-2">
+        <ul class="nav flex-column">
+          <li class="nav-item text-light text-center font-weight-bold my-2">
+            <a class="nav-link h5 mb-0 {{currentLink === 'article' ? 'active' : ''}}" href="/admin/articlesManage">文章管理</a>
+          </li>
+        </ul>
+      </aside>

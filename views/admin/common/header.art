@@ -1,0 +1,9 @@
+    <!-- header -->
+    <nav class="backstage_nav bg-info d-flex justify-content-center align-items-center">
+      <div class="py-2">
+        <a href="/admin" class="text-light lead">
+          <img src="/images/logo.png" alt="" style="width: 30px;" />
+         Blog後台管理系統
+        </a>
+      </div>
+    </nav>
